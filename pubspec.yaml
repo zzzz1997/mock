@@ -1,7 +1,7 @@
 name: mock
 description: A dart library that mimics mockjs.
 # version: 1.0.0
-# homepage: https://www.example.com
+# homepage: https://github.com/zzzz1997/mock
 # author: zzzz1997 <2549821359@qq.com>
 
 environment:
