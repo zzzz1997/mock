@@ -26,7 +26,7 @@ String county({bool splice = false}) {
   String provinceKey = pick(provincesData.keys.toList());
   String cityKey = pick(citiesData[provinceKey].keys.toList());
   String county = citiesData[cityKey][pick(citiesData[cityKey].keys.toList())];
-  return splice ? '${provincesData[provinceKey]} ${citiesData[provinceKey][cityKey]} ${county}' : city;
+  return splice ? '${provincesData[provinceKey]} ${citiesData[provinceKey][cityKey]} ${county}' : county;
 }
 
 /// return a random zip.
