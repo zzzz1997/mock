@@ -8,17 +8,49 @@ Created from templates made available by Stagehand under a BSD-style
 A simple usage example:
 
 ```dart
-import 'package:mock/mock.dart' as mock;
+import 'package:dart_mock/dart_mock.dart' as mock;
 
-main() {
+main() async {
   print(mock.boolean()); // true
+  print(await getUser()); // {name: Donna Jones, age: 30, idCard: 810000199806083942}
+}
+
+///
+/// Analog network requests
+///
+Future<User> getUser() async {
+  // network Delay
+  await Future.delayed(Duration(milliseconds: 500));
+  return User(mock.name(), mock.integer(max: 100), mock.idCard());
+}
+
+///
+/// user entity
+///
+class User {
+  String name;
+
+  int age;
+
+  String idCard;
+
+  User(this.name, this.age, this.idCard);
+
+  @override
+  String toString() {
+    return {
+      'name': this.name,
+      'age': this.age,
+      'idCard': this.idCard,
+    }.toString();
+  }
 }
 ```
 
 More usage, api naming reference [mockjs](http://mockjs.com/):
 
 ```dart
-import 'package:mock/mock.dart' as mock;
+import 'package:dart_mock/dart_mock.dart' as mock;
 
 main() {
   /// base

@@ -1,7 +1,7 @@
 part of 'package:dart_mock/src/mock_base.dart';
 
 /// return a random word.
-/// 
+///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
 String word({int min = 3, int max = 10}) {
@@ -9,7 +9,7 @@ String word({int min = 3, int max = 10}) {
 }
 
 /// return a random title, all word capitalized.
-/// 
+///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
 String title({int min = 3, int max = 7}) {
@@ -22,7 +22,7 @@ String title({int min = 3, int max = 7}) {
 }
 
 /// return a random sentence, the first word capitalized.
-/// 
+///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
 String sentence({int min = 12, int max = 18}) {
@@ -35,7 +35,7 @@ String sentence({int min = 12, int max = 18}) {
 }
 
 /// return a random paragraph.
-/// 
+///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
 String paragraph({int min = 3, int max = 7}) {
@@ -48,7 +48,7 @@ String paragraph({int min = 3, int max = 7}) {
 }
 
 /// return a random chinese word.
-/// 
+///
 /// default [pool] is commonly used 500 Chinese characters.
 /// you can provide [pool] string to override default.
 /// while [max] is null, [min] is the length of result.
@@ -58,7 +58,7 @@ String cword({String pool = chineseCharacters, int min = 1, int max}) {
 }
 
 /// return a random chinese title.
-/// 
+///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
 String ctitle({int min = 3, int max = 7}) {
@@ -71,7 +71,7 @@ String ctitle({int min = 3, int max = 7}) {
 }
 
 /// return a random chinese sentence.
-/// 
+///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
 String csentence({int min = 12, int max = 18}) {
@@ -79,7 +79,7 @@ String csentence({int min = 12, int max = 18}) {
 }
 
 /// return a random chinese paragraph.
-/// 
+///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
 String cparagraph({int min = 3, int max = 7}) {

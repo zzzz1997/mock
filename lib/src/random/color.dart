@@ -9,7 +9,7 @@ String hex({bool alpha = true}) {
 }
 
 /// return a 16 radix int, example: 4285062059.
-/// 
+///
 /// Apply to 'Color' constructor for flutter.
 int hexValue() {
   return int.parse(hex(), radix: 16);

@@ -24,11 +24,14 @@ main() {
   print(mock.dateTime()); // 2051-04-11 04:24:47.107
   print(mock.dateTime(end: DateTime.now())); // 1974-06-06 16:10:50.062
   // dateTime string
-  print(mock.dateTimeString(format: 'MM/dd/yyyy HH:mm:ss')); // 09/29/2046 06:00:37
+  print(mock.dateTimeString(
+      format: 'MM/dd/yyyy HH:mm:ss')); // 09/29/2046 06:00:37
   /// image
   // image
   print(mock.image()); // http://dummyimage.com/336x280
-  print(mock.image(format: mock.ImageFormat.jpg, text: 'hello')); // http://dummyimage.com/234x60.jpg&text=hello
+  print(mock.image(
+      format: mock.ImageFormat.jpg,
+      text: 'hello')); // http://dummyimage.com/234x60.jpg&text=hello
   /// color
   // hex
   print(mock.hex()); // FFEECA31
@@ -41,9 +44,11 @@ main() {
   // title
   print(mock.title()); // Ijthnunma Ypylek Nwhdj Clh Dgk Qcycmqhfy Wdufli
   // sentence
-  print(mock.sentence()); // Zefpnledb ocdmv jrdvyf gwmdfaycyk eygn djhwnivf sxmlirie lusu jqdu udivkxdfjv wejprnfne llc nxadc fnp pqdexnkfhx osgttekwjo xbhi.
+  print(mock
+      .sentence()); // Zefpnledb ocdmv jrdvyf gwmdfaycyk eygn djhwnivf sxmlirie lusu jqdu udivkxdfjv wejprnfne llc nxadc fnp pqdexnkfhx osgttekwjo xbhi.
   // paragraph
-  print(mock.paragraph()); // Hnnfzvpsy ospczee tyuqikxe lfwqjcnwlu rmtcfmcza ohcb rhvsfdg tdjgswwwze acqe veckj dslgsvitj yoqqimcmb rdzahv xrbg. Ckltgfb gqif bsfbd mlvacddr nkkbimoiuo xhxvwkf lwwu wkys kiptcjfxi clcdcihe hjc xrby. Gvikvr qqlfw opuyjb vvkfvh hkasgork cgtbxizbk gmbsl gprsf mbwluq gmen ienn nffwnspy bqrsxue jwcjunxdv cmjbpfo vkyjyj. Dzrpxluzh ubda gigfoympn mtoplqlv qjcpjpvgam zhlm jvjby wvmuehg sae dtatmsvrw nlnrtftec ltttvw olvgoo nldxpk pnqzlp. Ochbbh athk ynskhtoxvp zufpea vkvvjxf jospem xkvmhiur qppwp tnoe ruwh heqjjqdo coucpkik ynakuq giavuervoj kcgoa vmluef uqmip tsdk.
+  print(mock
+      .paragraph()); // Hnnfzvpsy ospczee tyuqikxe lfwqjcnwlu rmtcfmcza ohcb rhvsfdg tdjgswwwze acqe veckj dslgsvitj yoqqimcmb rdzahv xrbg. Ckltgfb gqif bsfbd mlvacddr nkkbimoiuo xhxvwkf lwwu wkys kiptcjfxi clcdcihe hjc xrby. Gvikvr qqlfw opuyjb vvkfvh hkasgork cgtbxizbk gmbsl gprsf mbwluq gmen ienn nffwnspy bqrsxue jwcjunxdv cmjbpfo vkyjyj. Dzrpxluzh ubda gigfoympn mtoplqlv qjcpjpvgam zhlm jvjby wvmuehg sae dtatmsvrw nlnrtftec ltttvw olvgoo nldxpk pnqzlp. Ochbbh athk ynskhtoxvp zufpea vkvvjxf jospem xkvmhiur qppwp tnoe ruwh heqjjqdo coucpkik ynakuq giavuervoj kcgoa vmluef uqmip tsdk.
   // chinese word
   print(mock.cword()); // 技
   // chinese title
@@ -51,7 +56,8 @@ main() {
   // chinese sentence
   print(mock.csentence()); // 过领任府七市至严观府满情根。
   // chinese paragraph
-  print(mock.cparagraph()); // 观主员种备候然速声为发热资最段。场写子记型周看业研具查江原布。机团开山南个据务严万就北儿走位。日书南将取低新影级新报内据。千面非小何好间明划断用提集。行片证用采油国毛多物本论酸色思以火。
+  print(mock
+      .cparagraph()); // 观主员种备候然速声为发热资最段。场写子记型周看业研具查江原布。机团开山南个据务严万就北儿走位。日书南将取低新影级新报内据。千面非小何好间明划断用提集。行片证用采油国毛多物本论酸色思以火。
   /// name
   // first name
   print(mock.first()); // Betty

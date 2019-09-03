@@ -11,7 +11,7 @@ String last() {
 }
 
 /// return a random english name.
-/// 
+///
 /// while [middle] is true, there will provide a middle name.
 String name({bool middle = false}) {
   int length = middle ? 3 : 2;
