@@ -1,4 +1,4 @@
-import 'package:mock/mock.dart' as mock;
+import 'package:dart_mock/dart_mock.dart' as mock;
 
 main() {
   /// base

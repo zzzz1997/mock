@@ -113,7 +113,7 @@ main() {
   // chinese county
   print(mock.county()); // 津南区
   print(mock.county(splice: true)); // 宁夏回族自治区 吴忠市 红寺堡区
-  // region
+  // zip
   print(mock.zip()); // 753404
   /// helper
   // capitalize

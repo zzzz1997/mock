@@ -2,17 +2,17 @@ import 'dart:math';
 
 import 'package:intl/intl.dart';
 
-part 'package:mock/src/data/city.dart';
-part 'package:mock/src/random/address.dart';
-part 'package:mock/src/random/base.dart';
-part 'package:mock/src/random/color.dart';
-part 'package:mock/src/random/date.dart';
-part 'package:mock/src/random/helper.dart';
-part 'package:mock/src/random/image.dart';
-part 'package:mock/src/random/miscellaneous.dart';
-part 'package:mock/src/random/name.dart';
-part 'package:mock/src/random/text.dart';
-part 'package:mock/src/random/web.dart';
+part 'package:dart_mock/src/data/city.dart';
+part 'package:dart_mock/src/random/address.dart';
+part 'package:dart_mock/src/random/base.dart';
+part 'package:dart_mock/src/random/color.dart';
+part 'package:dart_mock/src/random/date.dart';
+part 'package:dart_mock/src/random/helper.dart';
+part 'package:dart_mock/src/random/image.dart';
+part 'package:dart_mock/src/random/miscellaneous.dart';
+part 'package:dart_mock/src/random/name.dart';
+part 'package:dart_mock/src/random/text.dart';
+part 'package:dart_mock/src/random/web.dart';
 
 /// random object.
 Random _random = Random();

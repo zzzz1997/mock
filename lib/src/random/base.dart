@@ -1,4 +1,4 @@
-part of 'package:mock/src/mock_base.dart';
+part of 'package:dart_mock/src/mock_base.dart';
 
 /// [min]/[max] probability will return [def].
 bool boolean({int min = 5, int max = 10, bool def = true}) {

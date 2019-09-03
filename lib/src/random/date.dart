@@ -1,4 +1,4 @@
-part of 'package:mock/src/mock_base.dart';
+part of 'package:dart_mock/src/mock_base.dart';
 
 /// return a random dateTime.
 ///
