@@ -1,6 +1,6 @@
 name: dart_mock
 description: A dart library that mimics mockjs. You can use this to analog network requests before the real interface is developed.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/zzzz1997/mock
 author: zzzz1997 <2549821359@qq.com>
 
