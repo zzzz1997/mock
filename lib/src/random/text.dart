@@ -13,9 +13,9 @@ String word({int min = 3, int max = 10}) {
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
 String title({int min = 3, int max = 7}) {
-  int length = max == null ? min : integer(min: min, max: max);
-  List<String> list = List(length);
-  for (int i = 0; i < length; i++) {
+  var length = max == null ? min : integer(min: min, max: max);
+  var list = List(length);
+  for (var i = 0; i < length; i++) {
     list[i] = capitalize(word());
   }
   return list.join(' ');
@@ -26,9 +26,9 @@ String title({int min = 3, int max = 7}) {
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
 String sentence({int min = 12, int max = 18}) {
-  int length = max == null ? min : integer(min: min, max: max);
-  List<String> list = List(length);
-  for (int i = 0; i < length; i++) {
+  var length = max == null ? min : integer(min: min, max: max);
+  var list = List(length);
+  for (var i = 0; i < length; i++) {
     list[i] = i == 0 ? capitalize(word()) : word();
   }
   return '${list.join(' ')}.';
@@ -39,9 +39,9 @@ String sentence({int min = 12, int max = 18}) {
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
 String paragraph({int min = 3, int max = 7}) {
-  int length = max == null ? min : integer(min: min, max: max);
-  List<String> list = List(length);
-  for (int i = 0; i < length; i++) {
+  var length = max == null ? min : integer(min: min, max: max);
+  var list = List(length);
+  for (var i = 0; i < length; i++) {
     list[i] = sentence();
   }
   return list.join(' ');
@@ -62,9 +62,9 @@ String cword({String pool = chineseCharacters, int min = 1, int max}) {
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
 String ctitle({int min = 3, int max = 7}) {
-  int length = max == null ? min : integer(min: min, max: max);
-  StringBuffer stringBuffer = StringBuffer();
-  for (int i = 0; i < length; i++) {
+  var length = max == null ? min : integer(min: min, max: max);
+  var stringBuffer = StringBuffer();
+  for (var i = 0; i < length; i++) {
     stringBuffer.write(cword());
   }
   return stringBuffer.toString();
@@ -83,9 +83,9 @@ String csentence({int min = 12, int max = 18}) {
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
 String cparagraph({int min = 3, int max = 7}) {
-  int length = max == null ? min : integer(min: min, max: max);
-  List<String> list = List(length);
-  for (int i = 0; i < length; i++) {
+  var length = max == null ? min : integer(min: min, max: max);
+  var list = List(length);
+  for (var i = 0; i < length; i++) {
     list[i] = csentence();
   }
   return list.join('');

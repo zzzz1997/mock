@@ -14,9 +14,9 @@ String last() {
 ///
 /// while [middle] is true, there will provide a middle name.
 String name({bool middle = false}) {
-  int length = middle ? 3 : 2;
-  List<String> list = List(length);
-  for (int i = 0; i < length; i++) {
+  var length = middle ? 3 : 2;
+  var list = List(length);
+  for (var i = 0; i < length; i++) {
     list[i] = i == length - 1 ? last() : first();
   }
   return list.join(' ');

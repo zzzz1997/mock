@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="84a4b7cc-4032-4940-a7a2-02f956912173" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/mock_base.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/mock_base.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/random/address.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/random/address.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/random/base.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/random/base.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/random/color.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/random/color.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/random/name.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/random/name.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/random/text.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/random/text.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kBHAKpD696Wm25u9ZtBzzGGSZJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84a4b7cc-4032-4940-a7a2-02f956912173" name="Default Changelist" comment="" />
+      <created>1605166919257</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605166919257</updated>
+    </task>
+    <servers />
+  </component>
+</project>

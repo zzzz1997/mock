@@ -14,8 +14,8 @@ String provice() {
 ///
 /// while [splice] is true, it will return '[provice] [city]'.
 String city({bool splice = false}) {
-  String provinceKey = pick(provincesData.keys.toList());
-  String city =
+  var provinceKey = pick(provincesData.keys.toList());
+  var city =
       citiesData[provinceKey][pick(citiesData[provinceKey].keys.toList())];
   return splice ? '${provincesData[provinceKey]} ${city}' : city;
 }
@@ -24,9 +24,9 @@ String city({bool splice = false}) {
 ///
 /// while [splice] is true, it will return '[provice] [city] [county]'.
 String county({bool splice = false}) {
-  String provinceKey = pick(provincesData.keys.toList());
-  String cityKey = pick(citiesData[provinceKey].keys.toList());
-  String county = citiesData[cityKey][pick(citiesData[cityKey].keys.toList())];
+  var provinceKey = pick(provincesData.keys.toList());
+  var cityKey = pick(citiesData[provinceKey].keys.toList());
+  var county = citiesData[cityKey][pick(citiesData[cityKey].keys.toList())];
   return splice
       ? '${provincesData[provinceKey]} ${citiesData[provinceKey][cityKey]} ${county}'
       : county;
@@ -36,8 +36,8 @@ String county({bool splice = false}) {
 ///
 /// [length] is the length of zip.
 String zip({int length = 6}) {
-  StringBuffer stringBuffer = StringBuffer();
-  for (int i = 0; i < length; i++) {
+  var stringBuffer = StringBuffer();
+  for (var i = 0; i < length; i++) {
     stringBuffer.write(integer(max: 9));
   }
   return stringBuffer.toString();

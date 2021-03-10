@@ -5,3 +5,12 @@
 ## 1.0.1
 
 - Fix readme and example.
+
+## 1.0.1+1
+
+- Fix `maxInteger` to `100` for web.
+- Fix readme and example.
+
+## 1.0.2
+
+- Fix `intl` version to `any`.

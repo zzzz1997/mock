@@ -18,7 +18,7 @@ int integer({int min = 0, int max = maxInteger}) {
 ///
 /// because of the naming conflict, I added an 'R' letter.
 double doubleR({int min = 0, int max = 1, int decimal = -1}) {
-  double result = _random.nextDouble() * (max - min) + min;
+  var result = _random.nextDouble() * (max - min) + min;
   return decimal < 0 ? result : double.parse(result.toStringAsFixed(decimal));
 }
 
@@ -28,7 +28,7 @@ double doubleR({int min = 0, int max = 1, int decimal = -1}) {
 /// you also can provide [self] string.
 String character(
     {List<String> pools = const [lower, upper], String self = ''}) {
-  String pool = pools.join('') + self;
+  var pool = pools.join('') + self;
   return pool[integer(max: pool.length - 1)];
 }
 
@@ -43,13 +43,13 @@ String string(
     String self = '',
     int min = 5,
     int max}) {
-  String pool = pools.join('') + self;
-  int length = min;
+  var pool = pools.join('') + self;
+  var length = min;
   if (max != null) {
     length = integer(min: min, max: max);
   }
-  StringBuffer stringBuffer = StringBuffer();
-  for (int i = 0; i < length; i++) {
+  var stringBuffer = StringBuffer();
+  for (var i = 0; i < length; i++) {
     stringBuffer.write(pool[integer(max: pool.length - 1)]);
   }
   return stringBuffer.toString();
