@@ -2,7 +2,7 @@ part of 'package:dart_mock/src/mock_base.dart';
 
 /// return a random guid.
 String guid() {
-  String self = 'abcdefABCDEF1234567890';
+  const self = 'abcdefABCDEF1234567890';
   return '${string(pools: [], self: self, min: 8)}-${string(pools: [], self: self, min: 4)}-${string(pools: [], self: self, min: 4)}-${string(pools: [], self: self, min: 12)}';
 }
 

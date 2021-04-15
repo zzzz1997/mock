@@ -20,13 +20,11 @@ enum ImageFormat {
 /// [format] is the format of the image.
 /// [text] is the text you want paint on the image.
 String image(
-    {String size,
-    String background,
-    String foreground,
-    ImageFormat format,
-    String text}) {
-  if (size == null) {
-    size = pick(sizes);
-  }
+    {String? size,
+    String? background,
+    String? foreground,
+    ImageFormat? format,
+    String? text}) {
+  size ??= pick(sizes);
   return 'http://dummyimage.com/$size${background != null ? '/$background' : ''}${foreground != null ? '/$foreground' : ''}${format != null ? '.${format.toString().split('.')[1]}' : ''}${text != null ? '&text=$text' : ''}';
 }

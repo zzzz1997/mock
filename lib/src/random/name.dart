@@ -14,10 +14,10 @@ String last() {
 ///
 /// while [middle] is true, there will provide a middle name.
 String name({bool middle = false}) {
-  var length = middle ? 3 : 2;
-  var list = List(length);
+  final length = middle ? 3 : 2;
+  final list = [];
   for (var i = 0; i < length; i++) {
-    list[i] = i == length - 1 ? last() : first();
+    list.add(i == length - 1 ? last() : first());
   }
   return list.join(' ');
 }

@@ -4,7 +4,7 @@ part of 'package:dart_mock/src/mock_base.dart';
 ///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
-String word({int min = 3, int max = 10}) {
+String word({int min = 3, int? max = 10}) {
   return string(pools: [lower], min: min, max: max);
 }
 
@@ -12,11 +12,11 @@ String word({int min = 3, int max = 10}) {
 ///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
-String title({int min = 3, int max = 7}) {
-  var length = max == null ? min : integer(min: min, max: max);
-  var list = List(length);
+String title({int min = 3, int? max = 7}) {
+  final length = max == null ? min : integer(min: min, max: max);
+  final list = [];
   for (var i = 0; i < length; i++) {
-    list[i] = capitalize(word());
+    list.add(capitalize(word()));
   }
   return list.join(' ');
 }
@@ -25,11 +25,11 @@ String title({int min = 3, int max = 7}) {
 ///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
-String sentence({int min = 12, int max = 18}) {
-  var length = max == null ? min : integer(min: min, max: max);
-  var list = List(length);
+String sentence({int min = 12, int? max = 18}) {
+  final length = max == null ? min : integer(min: min, max: max);
+  final list = [];
   for (var i = 0; i < length; i++) {
-    list[i] = i == 0 ? capitalize(word()) : word();
+    list.add(i == 0 ? capitalize(word()) : word());
   }
   return '${list.join(' ')}.';
 }
@@ -38,11 +38,11 @@ String sentence({int min = 12, int max = 18}) {
 ///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
-String paragraph({int min = 3, int max = 7}) {
-  var length = max == null ? min : integer(min: min, max: max);
-  var list = List(length);
+String paragraph({int min = 3, int? max = 7}) {
+  final length = max == null ? min : integer(min: min, max: max);
+  final list = [];
   for (var i = 0; i < length; i++) {
-    list[i] = sentence();
+    list.add(sentence());
   }
   return list.join(' ');
 }
@@ -53,7 +53,7 @@ String paragraph({int min = 3, int max = 7}) {
 /// you can provide [pool] string to override default.
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
-String cword({String pool = chineseCharacters, int min = 1, int max}) {
+String cword({String pool = chineseCharacters, int min = 1, int? max}) {
   return string(pools: [], self: pool, min: min, max: max);
 }
 
@@ -61,9 +61,9 @@ String cword({String pool = chineseCharacters, int min = 1, int max}) {
 ///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
-String ctitle({int min = 3, int max = 7}) {
-  var length = max == null ? min : integer(min: min, max: max);
-  var stringBuffer = StringBuffer();
+String ctitle({int min = 3, int? max = 7}) {
+  final length = max == null ? min : integer(min: min, max: max);
+  final stringBuffer = StringBuffer();
   for (var i = 0; i < length; i++) {
     stringBuffer.write(cword());
   }
@@ -74,7 +74,7 @@ String ctitle({int min = 3, int max = 7}) {
 ///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
-String csentence({int min = 12, int max = 18}) {
+String csentence({int min = 12, int? max = 18}) {
   return '${ctitle(min: min, max: max)}。';
 }
 
@@ -82,11 +82,11 @@ String csentence({int min = 12, int max = 18}) {
 ///
 /// while [max] is null, [min] is the length of result.
 /// or the length is random between [min] to [max].
-String cparagraph({int min = 3, int max = 7}) {
-  var length = max == null ? min : integer(min: min, max: max);
-  var list = List(length);
+String cparagraph({int min = 3, int? max = 7}) {
+  final length = max == null ? min : integer(min: min, max: max);
+  final list = [];
   for (var i = 0; i < length; i++) {
-    list[i] = csentence();
+    list.add(csentence());
   }
   return list.join('');
 }

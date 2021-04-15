@@ -4,7 +4,7 @@ part of 'package:dart_mock/src/mock_base.dart';
 ///
 /// [alpha] determines whether or not to add alpha string 'FF'.
 String hex({bool alpha = true}) {
-  var hex = string(pools: [number], self: 'ABCDEF', min: 6);
+  final hex = string(pools: [number], self: 'ABCDEF', min: 6);
   return '${alpha ? 'FF' : ''}$hex';
 }
 

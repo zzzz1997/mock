@@ -1,4 +1,4 @@
-A dart library that mimics [mockjs](http://mockjs.com/).
+A dart library that mimics [mockjs](https://mockjs.com/).
 
 Created from templates made available by Stagehand under a BSD-style
 [license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).

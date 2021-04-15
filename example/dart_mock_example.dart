@@ -1,7 +1,8 @@
 import 'package:dart_mock/dart_mock.dart' as mock;
 
-main() async {
-  print(await getUser()); // {name: Donna Jones, age: 30, idCard: 810000199806083942}
+void main() async {
+  print(
+      await getUser()); // {name: Donna Jones, age: 30, idCard: 810000199806083942}
   /// base
   // boolean
   print(mock.boolean()); // false
@@ -138,9 +139,9 @@ class User {
   @override
   String toString() {
     return {
-      'name': this.name,
-      'age': this.age,
-      'idCard': this.idCard,
+      'name': name,
+      'age': age,
+      'idCard': idCard,
     }.toString();
   }
 }

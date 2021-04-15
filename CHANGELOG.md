@@ -14,3 +14,8 @@
 ## 1.0.2
 
 - Fix `intl` version to `any`.
+- Fix readme and example.
+
+## 2.0.0
+
+- Complete the migration to null safety.

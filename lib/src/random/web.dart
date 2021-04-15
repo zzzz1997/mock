@@ -13,21 +13,21 @@ String tld() {
 /// return a random domain.
 ///
 /// you can specify a [tld].
-String domain({String tld}) {
+String domain({String? tld}) {
   return '${word()}.${tld ?? pick(tlds)}';
 }
 
 /// return a random domain.
 ///
 /// you can specify [protocol] and [host].
-String url({String protocol, String host}) {
+String url({String? protocol, String? host}) {
   return '${protocol ?? pick(protocols)}://${host ?? domain()}/${word()}';
 }
 
 /// return a random email, example: esvhm@rkej.pg.
 ///
 /// you can specify a [host].
-String email({String host}) {
+String email({String? host}) {
   return '${word()}@${host ?? domain()}';
 }
 

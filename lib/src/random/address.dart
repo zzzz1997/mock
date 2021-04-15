@@ -7,28 +7,28 @@ String region() {
 
 /// return a random chinese provice.
 String provice() {
-  return provincesData[pick(provincesData.keys.toList())];
+  return provincesData[pick(provincesData.keys.toList())]!;
 }
 
 /// return a random chinese city.
 ///
 /// while [splice] is true, it will return '[provice] [city]'.
 String city({bool splice = false}) {
-  var provinceKey = pick(provincesData.keys.toList());
-  var city =
+  final provinceKey = pick(provincesData.keys.toList());
+  final city =
       citiesData[provinceKey][pick(citiesData[provinceKey].keys.toList())];
-  return splice ? '${provincesData[provinceKey]} ${city}' : city;
+  return splice ? '${provincesData[provinceKey]} $city' : city;
 }
 
 /// return a random chinese county.
 ///
 /// while [splice] is true, it will return '[provice] [city] [county]'.
 String county({bool splice = false}) {
-  var provinceKey = pick(provincesData.keys.toList());
-  var cityKey = pick(citiesData[provinceKey].keys.toList());
-  var county = citiesData[cityKey][pick(citiesData[cityKey].keys.toList())];
+  final provinceKey = pick(provincesData.keys.toList());
+  final cityKey = pick(citiesData[provinceKey].keys.toList());
+  final county = citiesData[cityKey][pick(citiesData[cityKey].keys.toList())];
   return splice
-      ? '${provincesData[provinceKey]} ${citiesData[provinceKey][cityKey]} ${county}'
+      ? '${provincesData[provinceKey]} ${citiesData[provinceKey][cityKey]} $county'
       : county;
 }
 
@@ -36,7 +36,7 @@ String county({bool splice = false}) {
 ///
 /// [length] is the length of zip.
 String zip({int length = 6}) {
-  var stringBuffer = StringBuffer();
+  final stringBuffer = StringBuffer();
   for (var i = 0; i < length; i++) {
     stringBuffer.write(integer(max: 9));
   }
