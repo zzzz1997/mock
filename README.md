@@ -47,7 +47,7 @@ class User {
 }
 ```
 
-More usage, api naming reference [mockjs](http://mockjs.com/):
+More usage, api naming reference [mockjs](https://mockjs.com/):
 
 ```dart
 import 'package:dart_mock/dart_mock.dart' as mock;

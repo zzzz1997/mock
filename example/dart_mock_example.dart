@@ -1,8 +1,7 @@
 import 'package:dart_mock/dart_mock.dart' as mock;
 
 void main() async {
-  print(
-      await getUser()); // {name: Donna Jones, age: 30, idCard: 810000199806083942}
+  print(await getUser()); // {name: 崔勇, age: 30, idCard: 810000199806083942}
   /// base
   // boolean
   print(mock.boolean()); // false
@@ -120,8 +119,8 @@ void main() async {
 ///
 Future<User> getUser() async {
   // network Delay
-  await Future.delayed(Duration(milliseconds: 500));
-  return User(mock.name(), mock.integer(max: 100), mock.idCard());
+  await Future.delayed(const Duration(milliseconds: 500));
+  return User(mock.cname(), mock.integer(max: 100), mock.idCard());
 }
 
 ///
