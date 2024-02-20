@@ -1,3 +1,4 @@
+// ignore_for_file: avoid_print
 import 'package:dart_mock/dart_mock.dart' as mock;
 
 void main() async {
@@ -127,13 +128,12 @@ Future<User> getUser() async {
 /// user entity
 ///
 class User {
+  User(this.name, this.age, this.idCard);
   String name;
 
   int age;
 
   String idCard;
-
-  User(this.name, this.age, this.idCard);
 
   @override
   String toString() {

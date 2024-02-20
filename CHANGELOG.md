@@ -1,3 +1,7 @@
+## 2.0.1
+
+- Fix pub points.
+
 ## 2.0.0
 
 - Complete the migration to null safety.

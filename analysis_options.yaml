@@ -1,14 +1,208 @@
-# Defines a default set of lint rules enforced for
-# projects at Google. For details and rationale,
-# see https://github.com/dart-lang/pedantic#enabled-lints.
-include: package:pedantic/analysis_options.yaml
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
 
-# For lint rules and documentation, see http://dart-lang.github.io/linter/lints.
-# Uncomment to specify additional rules.
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
 linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
+  # included above or to enable additional rules. A list of all available lints
+  # and their documentation is published at
+  # https://dart-lang.github.io/linter/lints/index.html.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
   rules:
+    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
+    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+    # 类型定义采用大写驼峰
     - camel_case_types
+    # 函数扩展采用大写驼峰
+    - camel_case_extensions
+    # 库和文件采用小写+下划线的方式命名
+    - library_names
+    - file_names
+    # 普通变量使用驼峰命名
+    - non_constant_identifier_names
+    # 静态变量推荐使用驼峰命名
+    - constant_identifier_names
+    # 包引用排序
+    - directives_ordering
+    # 控制流中尽量使用大括号
+    - curly_braces_in_flow_control_structures
+    # 评论使用三斜杠标识
+    - slash_for_doc_comments
+    # 评论中使用可引用范围内的变量
+    - comment_references
+    # 避免引用包内的具体实现文件
+    - implementation_imports
+    # 避免对lib/目录下的文件采用相对引用
+    - avoid_relative_lib_imports
+    # 避免初始化变量为null
+    - avoid_init_to_null
+    # 避免不需要的大括号
+    - unnecessary_brace_in_string_interps
+    # 使用相邻字符串的方式连接字符串
+    - prefer_adjacent_string_concatenation
+    # 尽量使用显式类型的方式初始化集合
+    - prefer_collection_literals
+    # 使用isEmpty和isNotEmpty来判断是否为空，而不是通过length是否为0的方式
+    - prefer_is_empty
+    - prefer_is_not_empty
+    # 去除不必要的lambdas表达式
+    - unnecessary_lambdas
+    # 使用函数声明的方式将函数和变量做绑定
+    - prefer_function_declarations_over_variables
+    # 如无特殊作用，不用专门定义设置和获取方法
+    - unnecessary_getters_setters
+    # 避免使用this方式调用变量
+    - unnecessary_this
+    # 私有变量推荐定义成final
+    - prefer_final_fields
+    # 可以考虑使用..方这样式，而不是返回this指针的方式来实现流式调用
+    - avoid_returning_this
+    # 避免构造函数使用{}做空实现，可以直接使用；
+    - empty_constructor_bodies
+    # 推荐在构建函数中直接对成员变量进行赋值
+    - prefer_initializing_formals
+    # 去掉new关键字
+    - unnecessary_new
+    # 在const环境中，避免使用const关键字
+    - unnecessary_const
+    # 对捕获异常不处理的情况话，推荐使用rethrow方式重新抛出，而不是直接throw
+    - use_rethrow_when_possible
+    # 建议尽可能使用mixin机制
+    - prefer_mixin
+    # 未初始化变量，尽量提供类型
+    - prefer_typing_uninitialized_variables
+    # 避免使用true或者false作为参数，应该换成更有语义的表达
+    - avoid_positional_boolean_parameters
+    # 如果重写了==，同时也需要重写hashCode
+    - hash_and_equals
+    # 非immutable类不要重写==和hashCode，否则在集合中会出现bug
+    - avoid_equals_and_hash_code_on_mutable_classes
+    # 在自定义==时，不要做null检查
+    - avoid_null_checks_in_equality_operators
+    # 避免空的else语句
+    - avoid_empty_else
+    # 避免使用隐形类型传递
+    - avoid_shadowing_type_parameters
+    # 避免类型做参数
+    - avoid_types_as_parameter_names
+    # 避免await非future对象
+    - await_only_futures
+    # 避免catch空实现
+    - empty_catches
+    # 集合的remove需要传递符合集合的类型的参数
+    - collection_methods_unrelated_type
+    # case中避免重复
+    - no_duplicate_case_values
+    # deprecated函数或者变量，需要注明相关信息
+    - provide_deprecation_message
+    # 去掉不需要的重写注解
+    - unnecessary_overrides
+    # 两个变量对比时，避免类型不一致
+    - unrelated_type_equality_checks
+    # 避免赋值给void类型变量
+    - void_checks
+    # 正则表达式合法性检验
+    - valid_regexps
+    # 对重写的方法和变量加override注解
+    - annotate_overrides
+    # 重写方法的参数不要改变参数名称
+    - avoid_renaming_method_parameters
+    # 不要在void函数中返回null
+    - avoid_returning_null_for_void
+    # 避免在单个函数调用中使用传递调用语法
+    - avoid_single_cascade_in_expression_statements
+    # 避免在finally语句块中使用控制流语句
+    - control_flow_in_finally
+    # 避免空语句
+    - empty_statements
+    # cases语句的各种情况需要完整覆盖
+    - exhaustive_cases
+    # 避免传递null给闭包参数
+    - null_closures
+    # 避免重写类的fields
+    - overridden_fields
+    # 建议判空逻辑中使用??=语法
+    - prefer_conditional_assignment
+    # 判断集合或者字符串的包含的逻辑，使用contains而不是indexOf
+    - prefer_contains
+    # 空判断尽量使用??操作符
+    - prefer_if_null_operators
+    # 允许情况下，list使用内联的方式声明
+    - prefer_inlined_adds
+    # 推荐使用is!操作符
+    - prefer_is_not_operator
+    # 推荐使用?.操作符
+    - prefer_null_aware_operators
+    # 类型定义尽可能使用void而不是null
+    - prefer_void_to_null
+    # 避免递归调用getter
+    - recursive_getters
+    # 避免在空判断中使用null
+    - unnecessary_null_in_if_null_operators
+    # 去掉不必要的反斜线
+    - unnecessary_string_escapes
+    # 避免不必要的字符传引用逻辑
+    - unnecessary_string_interpolations
+    # 避免生产环境使用print
+    - avoid_print
+    # 去掉无用的container节点
+    - avoid_unnecessary_containers
+    # 避免在flutter代码中引用web相关的库
+    - avoid_web_libraries_in_flutter
+    # 在state create函数中不加入额外逻辑
+    - no_logic_in_create_state
+    # 优先使用const构造函数
+    - prefer_const_constructors
+    # 在immutable类定义中使用const构造函数
+    - prefer_const_constructors_in_immutables
+    # 尽可能定义成const变量
+    - prefer_const_declarations
+    # 在immutable类创建中尽量使用const变量
+    - prefer_const_literals_to_create_immutables
+    # 优先使用SizedBox而不是Container
+    - sized_box_for_whitespace
+    # 使用8位16进制整数标识颜色值
+    - use_full_hex_values_for_flutter_colors
+    # 在构造函数中加入key函数
+    - use_key_in_widget_constructors
+    # 无用代码清理
+    - unnecessary_statements
+    # 控制流语句分散到不同层
+    - always_put_control_body_on_new_line
+    # required修饰变量排到变量列表前面
+    - always_put_required_named_parameters_first
+    # dart.async.StreamSubscription需要在恰当时机调用cancel方法
+    - cancel_subscriptions
+    # 倾向在初始化列表中增加assert
+    - prefer_asserts_in_initializer_lists
+    # 符合标准情况下，加上final关键字
+    - prefer_final_locals
+    # 构造函数排在变量之前
+    - sort_constructors_first
+    - sort_unnamed_constructors_first
+    # 在比较之前先测试类型是否符合要求
+    - test_types_in_equals
+    # 避免不必要的null判断
+    - unnecessary_null_aware_assignments
+    # 去掉不必要的圆括号
+    - unnecessary_parenthesis
+    # 避免不安全的html的api
+    - unsafe_html
+    # 尽量使用单引号
+    - prefer_single_quotes
 
-analyzer:
-#   exclude:
-#     - path/to/excluded/files/**
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options

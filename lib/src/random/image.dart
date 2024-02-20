@@ -14,7 +14,7 @@ enum ImageFormat {
 
 /// return a random image url.
 ///
-/// [size] is the size of the image, [width]x[height], example: 320x240.
+/// [size] is the size of the image, (width)x(height), example: 320x240.
 /// [background] is the background color of the image, example: ffffff, 09f, ef, c.
 /// [foreground] is the foreground color of the image, example: ffffff, 09f, ef, c.
 /// [format] is the format of the image.
